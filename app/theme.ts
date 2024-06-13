@@ -10,7 +10,7 @@ const lekton = Lekton({
 })
 
 const open_sans = Open_Sans({
-  weight: ['300', '400'],
+  weight: ['300', '400', '500'],
   subsets: ['latin'],
   display: 'swap',
 })
@@ -74,6 +74,14 @@ const theme = createTheme({
       fontWeight: 700,
       letterSpacing: '.015rem',
       lineHeight: 'normal',
+    },
+    body1: {
+      fontWeight: 300,
+      letterSpacing: '.01rem',
+    },
+    body2: {
+      fontWeight: 400,
+      letterSpacing: '.01rem',
     },
   },
   components: {

@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Logo = ({ width = 40 }: { width?: number }) => {
   return (
-    <Box sx={{ width, height: width }}>
+    <Box sx={{ width, height: width, fontSize: 'initial' }}>
       <Image
         alt="logo"
         src="/logos/logo-black.png"

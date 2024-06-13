@@ -13,7 +13,7 @@ const HeaderTitle = ({ isOneLine = false }: { isOneLine?: boolean }) => {
         },
       }}
     >
-      <Logo />
+      <Logo width={isOneLine ? 19 : 40} />
       <Typography
         variant="h6"
         color="black"

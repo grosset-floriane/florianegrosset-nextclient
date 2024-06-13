@@ -1,0 +1,20 @@
+.link {
+  text-decoration: none;
+  font-weight: 400;
+  color: black;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.onDefault:hover,
+.onDefault:focus-visible {
+  background-color: #a6bbf5;
+}
+
+.onPrimary:hover,
+.onPrimary:focus-visible {
+  background-color: #ececec;
+  outline: none;
+}

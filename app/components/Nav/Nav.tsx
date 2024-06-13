@@ -6,11 +6,8 @@ import { Box } from '@mui/material'
 import MenuButton from './MenuButton'
 import CloseButton from './CloseButton'
 import useMediaQuery from '@/app/hooks/useMediaQuery'
+import { NAV_LINKS } from '@/app/contants/navLinks'
 
-const NAV_LINKS = [
-  { label: 'About', url: '/' },
-  { label: 'Contact', url: '/contact' },
-]
 export const Nav = () => {
   const { isDesktop } = useMediaQuery()
   const [isOpen, setIsOpen] = useState(false)
