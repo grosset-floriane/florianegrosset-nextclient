@@ -5,6 +5,7 @@ import { ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import { StoreProvider } from './StoreProvider'
 import theme from './theme'
+import Layout from './components/layout/Layout'
 import styles from './styles/layout.module.css'
 
 interface Props {
@@ -19,9 +20,11 @@ export default function RootLayout({ children }: Props) {
           <AppRouterCacheProvider options={{ enableCssLayer: true }}>
             <ThemeProvider theme={theme}>
               <CssBaseline />
+              <Layout>
 
                   <main className={styles.main}>{children}</main>
 
+              </Layout>
             </ThemeProvider>
           </AppRouterCacheProvider>
         </body>
