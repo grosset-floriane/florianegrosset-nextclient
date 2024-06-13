@@ -7,6 +7,8 @@ const StyledLayout = styled(
 )(({ theme }) => ({
   padding: theme.spacing(2, 2, 6),
   marginTop: theme.spacing(9),
+  width: '100%',
+  marginLeft: 'initial',
   [theme.breakpoints.up('sm')]: {
     padding: theme.spacing(5),
     maxWidth: 678,

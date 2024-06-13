@@ -13,7 +13,6 @@ const Layout: React.FC<Props> = ({ children }) => {
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        minHeight: '100vh',
         backgroundColor: LIGHT_PALETTE.grey.light,
       }}
     >
