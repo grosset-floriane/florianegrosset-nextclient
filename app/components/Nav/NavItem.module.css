@@ -1,0 +1,26 @@
+@media (min-height: 350px) {
+  .listItem {
+    margin-bottom: 8px;
+  }
+}
+
+.link {
+  padding: 0;
+}
+
+.activeLink {
+  text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+  .link {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .link > div {
+    justify-content: center;
+  }
+}
