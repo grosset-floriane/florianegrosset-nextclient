@@ -1,0 +1,92 @@
+'use client'
+import { Lekton, Open_Sans } from 'next/font/google'
+import { createTheme } from '@mui/material/styles'
+import { LIGHT_PALETTE } from './contants/theme'
+
+const lekton = Lekton({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+const open_sans = Open_Sans({
+  weight: ['300', '400'],
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+const theme = createTheme({
+  palette: {
+    mode: 'light',
+    primary: {
+      main: LIGHT_PALETTE.blue.main,
+    },
+    secondary: {
+      main: LIGHT_PALETTE.sand.main,
+    },
+    action: {
+      active: LIGHT_PALETTE.black.main,
+    },
+    background: {
+      default: LIGHT_PALETTE.grey.light,
+      paper: LIGHT_PALETTE.grey.light,
+    },
+    error: {
+      main: LIGHT_PALETTE.red.main,
+    },
+    success: {
+      main: LIGHT_PALETTE.green.main,
+    },
+    warning: {
+      main: LIGHT_PALETTE.orange.main,
+    },
+    info: {
+      main: LIGHT_PALETTE.blue.main,
+    },
+  },
+  typography: {
+    fontFamily: open_sans.style.fontFamily,
+    fontSize: 20,
+    h1: {
+      fontFamily: lekton.style.fontFamily,
+      fontSize: 64,
+      letterSpacing: '-.05rem',
+      fontWeight: 700,
+    },
+    h2: {
+      fontFamily: lekton.style.fontFamily,
+      fontSize: 64,
+      letterSpacing: '-.05rem',
+    },
+    h3: {
+      fontFamily: lekton.style.fontFamily,
+      fontSize: 51,
+    },
+    h4: {
+      fontFamily: lekton.style.fontFamily,
+      fontSize: 36,
+      fontWeight: 700,
+      letterSpacing: '.1rem',
+    },
+    h6: {
+      fontFamily: lekton.style.fontFamily,
+      fontSize: 23,
+      fontWeight: 700,
+      letterSpacing: '.015rem',
+      lineHeight: 'normal',
+    },
+  },
+  components: {
+    MuiAlert: {
+      styleOverrides: {
+        root: ({ ownerState }) => ({
+          ...(ownerState.severity === 'info' && {
+            backgroundColor: '#60a5fa',
+          }),
+        }),
+      },
+    },
+  },
+})
+
+export default theme
