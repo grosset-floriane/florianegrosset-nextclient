@@ -126,3 +126,9 @@ theme.typography.h1 = {
 }
 
 export default theme
+
+declare module '@mui/material/AppBar' {
+  interface AppBarPropsColorOverrides {
+    background: true
+  }
+}
