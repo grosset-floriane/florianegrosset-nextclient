@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Typography from '@mui/material/Typography'
+import { Metadata } from 'next'
 import LayoutColumn from '../components/layout/LayoutColumn'
 import MainTitle from '../components/mainTitle/MainTitle'
 
@@ -35,4 +36,10 @@ export default function About() {
       </ActionsContainer> */}
     </LayoutColumn>
   )
+}
+
+export const metadata: Metadata = {
+  title: 'Contact',
+  description:
+    "Find out how to reach out. Don't hesitate to drop me a line, I am happy to have a chat!",
 }

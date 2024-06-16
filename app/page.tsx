@@ -3,6 +3,7 @@ import Link from './components/link/Link'
 import LayoutColumn from './components/layout/LayoutColumn'
 import MainTitle from './components/mainTitle/MainTitle'
 import { SITE_TAGELINE } from './contants/navLinks'
+import type { Metadata } from 'next'
 
 export default function IndexPage() {
   return (
@@ -46,5 +47,6 @@ export default function IndexPage() {
 }
 
 export const metadata: Metadata = {
-  title: "Redux Toolkit",
-};
+  title: 'About',
+  description: SITE_TAGELINE,
+}

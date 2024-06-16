@@ -8,6 +8,7 @@ import theme from './theme'
 import Layout from './components/layout/Layout'
 import TopAppBar from './components/topAppBar/TopAppBar'
 import Footer from './components/footer/Footer'
+import { Metadata } from 'next'
 
 interface Props {
   readonly children: ReactNode
@@ -33,4 +34,11 @@ export default function RootLayout({ children }: Props) {
       </html>
     </StoreProvider>
   )
+}
+
+export const metadata: Metadata = {
+  title: {
+    template: '%s - Floriane Grosset',
+    default: 'About',
+  },
 }
