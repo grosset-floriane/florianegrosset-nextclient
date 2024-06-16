@@ -20,7 +20,7 @@ const Footer = () => {
     >
       <StyledLayout container columnSpacing={4}>
         <Grid item xs={12} sm={8} lg={6} className={styles.gridItem}>
-          <HeaderTitle isOneLine />
+          <HeaderTitle isOneLine isOnPrimary />
           <Typography variant="body2">
             I am a web developer passionate about accessibility, sustainability
             and art.

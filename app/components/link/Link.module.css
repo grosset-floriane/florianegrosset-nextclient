@@ -11,6 +11,7 @@
 .onDefault:hover,
 .onDefault:focus-visible {
   background-color: #a6bbf5;
+  outline: none;
 }
 
 .onPrimary:hover,

@@ -1,0 +1,15 @@
+.link {
+  text-decoration: none;
+  z-index: 999999;
+  width: fit-content;
+}
+
+.link:focus-visible {
+  outline: none;
+  background-color: #a6bbf5;
+}
+
+.onPrimary.link:focus-visible,
+.onPrimary.link:hover {
+  background-color: #ececec;
+}

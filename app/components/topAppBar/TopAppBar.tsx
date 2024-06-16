@@ -1,22 +1,37 @@
+'use client'
 import { AppBar, Box, Toolbar } from '@mui/material'
 import Link from 'next/link'
-import React from 'react'
+import type { ReactElement } from 'react'
 import { Nav } from '../Nav/Nav'
 import HeaderTitle from '../headerTitle/HeaderTitle'
 import styles from './TopAppBar.module.css'
+import { Slide } from '@mui/material'
+import useScrollTrigger from '@mui/material/useScrollTrigger'
 
-interface Props {}
+interface Props {
+  children: ReactElement<any, any>
+}
 
-const TopAppBar: React.FC<Props> = () => {
+const HideOnScroll = ({ children }: Props) => {
+  const trigger = useScrollTrigger()
+
   return (
-    <AppBar position="fixed" color="background" className={styles.appbar}>
-      <Toolbar variant="dense" className={styles.toolbar}>
-        <Link href="/" className={styles.link}>
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  )
+}
+
+const TopAppBar: React.FC = () => {
+  return (
+    <HideOnScroll>
+      <AppBar position="fixed" color="background" className={styles.appbar}>
+        <Toolbar variant="dense" className={styles.toolbar}>
           <HeaderTitle />
-        </Link>
-        <Nav />
-      </Toolbar>
-    </AppBar>
+          <Nav />
+        </Toolbar>
+      </AppBar>
+    </HideOnScroll>
   )
 }
 

@@ -7,6 +7,9 @@ import MenuButton from './MenuButton'
 import CloseButton from './CloseButton'
 import useMediaQuery from '@/app/hooks/useMediaQuery'
 import { NAV_LINKS } from '@/app/contants/navLinks'
+import { Modal } from '@mui/base/Modal'
+import HeaderTitle from '../headerTitle/HeaderTitle'
+import Link from 'next/link'
 
 export const Nav = () => {
   const { isDesktop } = useMediaQuery()
@@ -14,14 +17,16 @@ export const Nav = () => {
 
   const nav = (
     <nav className={`${styles.nav} ${isOpen ? styles.navopen : ''}`}>
-      {NAV_LINKS.map(({ label, url }) => (
-        <NavItem
-          key={label}
-          url={url}
-          label={label}
-          onClick={() => setIsOpen(false)}
-        />
-      ))}
+      <ul className={styles.list}>
+        {NAV_LINKS.map(({ label, url }) => (
+          <NavItem
+            key={label}
+            url={url}
+            label={label}
+            onClick={() => setIsOpen(false)}
+          />
+        ))}
+      </ul>
     </nav>
   )
   return (
@@ -29,10 +34,15 @@ export const Nav = () => {
       {!isDesktop && <MenuButton setIsOpen={setIsOpen} isOpen={isOpen} />}
       {isDesktop && nav}
       {!isDesktop && isOpen && (
-        <Box className={styles.container}>
-          {nav}
-          <CloseButton setIsOpen={setIsOpen} />
-        </Box>
+        <Modal open={isOpen} aria-label="menu">
+          <Box className={styles.container}>
+            <HeaderTitle isOnPrimary />
+            <Box className={styles.linksContainer}>
+              {nav}
+              <CloseButton setIsOpen={setIsOpen} />
+            </Box>
+          </Box>
+        </Modal>
       )}
     </Box>
   )

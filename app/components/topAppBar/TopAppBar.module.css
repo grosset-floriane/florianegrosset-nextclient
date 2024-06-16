@@ -16,13 +16,3 @@
 .appbar {
   box-shadow: none;
 }
-
-.link {
-  text-decoration: none;
-  z-index: 999999;
-}
-
-.link:focus-visible {
-  outline: none;
-  background-color: #a6bbf5;
-}

@@ -5,19 +5,44 @@
   overflow: hidden;
   top: 0;
   left: 0;
-  padding-top: 72px;
-  /* background-color: theme.palette.primary.main; */
+  padding-top: 16px;
+  padding-left: 16px;
   background-color: #a6bbf5;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   flex-grow: 1;
   z-index: 99999;
+}
+
+.headerLink {
+  text-decoration: none;
+}
+
+.linksContainer {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .nav {
   display: flex;
   margin-left: auto;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 600px) {
+  .list {
+    display: flex;
+  }
 }
 
 .navopen {
