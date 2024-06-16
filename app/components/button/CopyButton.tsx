@@ -2,6 +2,8 @@
 import React from 'react'
 import Button from './Button'
 import { copyText } from '../../utils/functions'
+import { useAppDispatch } from '@/lib/hooks'
+import { setSuccessNotification } from '@/lib/features/notification/notificationSlice'
 
 interface Props {
   text: string
@@ -9,7 +11,12 @@ interface Props {
 }
 
 const CopyButton: React.FC<Props> = ({ text, label }) => {
-  return <Button onClick={() => copyText(text)}>{label}</Button>
+  const dispatch = useAppDispatch()
+  const handleClick = () => {
+    copyText(text)
+    dispatch(setSuccessNotification('Copied!'))
+  }
+  return <Button onClick={handleClick}>{label}</Button>
 }
 
 export default CopyButton
