@@ -8,6 +8,7 @@ import { NAV_LINKS } from '@/app/contants/navLinks'
 import styles from './Footer.module.css'
 import { LIGHT_PALETTE } from '@/app/contants/theme'
 import { usePathname } from 'next/navigation'
+import Copyright from '../Copyrights'
 
 const Footer = () => {
   const pathname = usePathname()
@@ -51,6 +52,7 @@ const Footer = () => {
               ))}
             </ul>
           </nav>
+          <Copyright />
         </Grid>
       </StyledLayout>
     </Container>

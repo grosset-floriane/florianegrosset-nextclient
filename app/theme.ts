@@ -95,6 +95,11 @@ const theme = createTheme({
       fontSize: 24,
       marginBottom: 32,
     },
+    subtitle1: {
+      fontSize: 15,
+      fontFamily: open_sans.style.fontFamily,
+      letterSpacing: '.01rem',
+    },
   },
   components: {
     MuiAlert: {
