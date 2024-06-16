@@ -68,6 +68,11 @@ const theme = createTheme({
       fontWeight: 700,
       letterSpacing: '.1rem',
     },
+    h5: {
+      fontFamily: lekton.style.fontFamily,
+      fontSize: 28,
+      fontWeight: 700,
+    },
     h6: {
       fontFamily: lekton.style.fontFamily,
       fontSize: 23,
@@ -83,6 +88,13 @@ const theme = createTheme({
       fontWeight: 400,
       letterSpacing: '.01rem',
     },
+    caption: {
+      fontFamily: lekton.style.fontFamily,
+      fontWeight: 700,
+      letterSpacing: '.1rem',
+      fontSize: 24,
+      marginBottom: 32,
+    },
   },
   components: {
     MuiAlert: {
@@ -96,5 +108,16 @@ const theme = createTheme({
     },
   },
 })
+
+theme.typography.h1 = {
+  fontFamily: lekton.style.fontFamily,
+  letterSpacing: '-0.15rem',
+  fontWeight: 700,
+  marginBottom: theme.spacing(2),
+  [theme.breakpoints.up('md')]: {
+    fontSize: '5rem',
+    fontWeight: 400,
+  },
+}
 
 export default theme
