@@ -1,25 +1,24 @@
-'use client'
 import React, { FC } from 'react'
 import { Box, Grid } from '@mui/material'
-import useMediaQuery from '@/app/hooks/useMediaQuery'
 
 interface StickyElementProps {
   stickyTopPosition: number
-  isDesktop: boolean
   children: any
 }
 
 const StickyElement: FC<StickyElementProps> = ({
   children,
   stickyTopPosition,
-  isDesktop,
 }) => {
   return (
     <Box
       sx={{
-        position: isDesktop ? 'sticky' : 'initial',
+        position: 'initial',
         top: stickyTopPosition,
         maxWidth: 450,
+        '@media (min-width: 1200px)': {
+          position: 'sticky',
+        },
       }}
     >
       {children}
@@ -40,9 +39,8 @@ const LayoutColumn: FC<LayoutColumnProps> = ({
   isSticky = false,
   marginTop = 0,
 }) => {
-  const { isDesktop } = useMediaQuery()
   const columnContent = isSticky ? (
-    <StickyElement stickyTopPosition={stickyTopPosition} isDesktop={isDesktop}>
+    <StickyElement stickyTopPosition={stickyTopPosition}>
       {children}
     </StickyElement>
   ) : (
@@ -51,7 +49,16 @@ const LayoutColumn: FC<LayoutColumnProps> = ({
 
   return (
     <>
-      <Grid item xs={12} lg={isSticky ? 5 : 7} mt={isDesktop ? marginTop : 0}>
+      <Grid
+        item
+        xs={12}
+        lg={isSticky ? 5 : 7}
+        sx={{
+          '@media (min-width: 1200px)': {
+            mt: marginTop,
+          },
+        }}
+      >
         {columnContent}
       </Grid>
     </>

@@ -19,7 +19,7 @@ const Footer = () => {
       className={styles.container}
       sx={{ backgroundColor: LIGHT_PALETTE.blue.main }}
     >
-      <StyledLayout container columnSpacing={4}>
+      <StyledLayout container>
         <Grid item xs={12} sm={8} lg={6} className={styles.gridItem}>
           <HeaderTitle isOneLine isOnPrimary />
           <Typography variant="body2">
