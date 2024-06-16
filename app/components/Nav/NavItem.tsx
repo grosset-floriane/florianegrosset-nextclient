@@ -36,11 +36,12 @@ const NavItem: React.FC<Props> = ({ label, url, onClick }) => {
               ? LIGHT_PALETTE.blue.main
               : LIGHT_PALETTE.grey.light,
           },
-          '&.Mui-focusVisible, &:hover': {
+          '&.Mui-focusVisible, &:hover, &:active': {
             backgroundColor: 'transparent',
           },
         }}
         onClick={onClick}
+        disableRipple
       >
         <ListItemText
           primary={
