@@ -16,7 +16,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         backgroundColor: LIGHT_PALETTE.grey.light,
       }}
     >
-      <StyledLayout container spacing={4} component="main">
+      <StyledLayout container component="main">
         {children}
       </StyledLayout>
     </Box>

@@ -23,11 +23,8 @@ export default function RootLayout({ children }: Props) {
           <AppRouterCacheProvider options={{ enableCssLayer: true }}>
             <ThemeProvider theme={theme}>
               <CssBaseline />
-              <Layout>
-                <TopAppBar />
-
-                {children}
-              </Layout>
+              <TopAppBar />
+              <Layout>{children}</Layout>
               <Notification />
               <Footer />
             </ThemeProvider>
