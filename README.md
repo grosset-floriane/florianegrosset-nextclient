@@ -1,29 +1,22 @@
-# Redux Toolkit TypeScript Example
+# My personal website
 
-This example shows how to integrate Next.js with [Redux Toolkit](https://redux-toolkit.js.org).
+I am currently building the MVP (Minimum Viable Product) for my personal
+website. This code is at the moment self-standing. Second version of the site
+made with Next.js.
 
-**Redux Toolkit**(also known as "RTK" for short) provides a standardized way to write Redux logic. It includes utilities that help simplify many common use cases, including [store setup](https://redux-toolkit.js.org/api/configureStore), [creating reducers and writing immutable update logic](https://redux-toolkit.js.org/api/createreducer), and even [creating entire "slices" of state at once](https://redux-toolkit.js.org/api/createslice). This example showcases each of these features in conjunction with Next.js.
+## Current state
 
-## Deploy Your Own
+- Uses: Next.js, React, typescript, Redux toolkit, Mui library, eslint
+- [Design file on Figma](https://www.figma.com/file/0AJCzhVlPN1iKLPoSKicjx/florianegrosset-%2F-Mobile?node-id=0%3A1)
+- [Design system file](https://www.figma.com/file/NZBmrDtwfnhtQ7f1Mj8lX5/florianegrosset-%2F-Design-System)
+- Online at [florianegrosset.com](https://florianegrosset.com)
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+## Next in building
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-redux&project-name=with-redux&repository-name=with-redux)
+- CV page
 
-## How to Use
+## Coming
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-redux with-redux-app
-```
-
-```bash
-yarn create next-app --example with-redux with-redux-app
-```
-
-```bash
-pnpm create next-app --example with-redux with-redux-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+- Server part with MongoDB, GraphQL and express
+- admin section
+- and more
