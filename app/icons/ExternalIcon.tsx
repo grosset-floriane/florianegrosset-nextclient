@@ -8,7 +8,7 @@ const ExternalIcon = ({
   size = 24,
 }: {
   className?: string
-  size: number
+  size?: number
 }) => {
   return (
     <OpenInNewIcon
