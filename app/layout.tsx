@@ -40,4 +40,25 @@ export const metadata: Metadata = {
     template: '%s - Floriane Grosset',
     default: 'About - Floriane Grosset',
   },
+  metadataBase: new URL('https://florianegrosset.com'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-GB': '/en-GB',
+    },
+  },
+  openGraph: {
+    images: '/opengraph-image.jpg',
+    siteName: 'Floriane Grosset',
+    url: 'https://florianegrosset.com',
+    locale: 'en_GB',
+    type: 'website',
+  },
+  twitter: {
+    creator: 'Floriane Grosset',
+    images: {
+      url: 'https://florianegrosset.com/opengraph-image.jpg',
+      alt: 'Logo with text: Floriane Grosset, Frontend developer, Accessibility advocate',
+    },
+  },
 }
