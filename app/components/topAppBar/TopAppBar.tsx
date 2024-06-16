@@ -9,16 +9,14 @@ interface Props {}
 
 const TopAppBar: React.FC<Props> = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" color="background" className={styles.appbar}>
-        <Toolbar variant="dense" className={styles.toolbar}>
-          <Link href="/" className={styles.link}>
-            <HeaderTitle />
-          </Link>
-          <Nav />
-        </Toolbar>
-      </AppBar>
-    </Box>
+    <AppBar position="fixed" color="background" className={styles.appbar}>
+      <Toolbar variant="dense" className={styles.toolbar}>
+        <Link href="/" className={styles.link}>
+          <HeaderTitle />
+        </Link>
+        <Nav />
+      </Toolbar>
+    </AppBar>
   )
 }
 
