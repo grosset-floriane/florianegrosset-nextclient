@@ -3,6 +3,22 @@ import Typography from '@mui/material/Typography'
 import { Metadata } from 'next'
 import LayoutColumn from '../components/layout/LayoutColumn'
 import MainTitle from '../components/mainTitle/MainTitle'
+import Button from '../components/button/Button'
+import ActionsContainer from '../components/actionContainer/ActionContainer'
+import { EMAIL } from '../contants/navLinks'
+import { copyText } from '../utils/functions'
+import CopyButton from '../components/button/CopyButton'
+
+const SOCIAL_MEDIA = [
+  {
+    label: 'LinkedIn Profile',
+    link: 'https://www.linkedin.com/in/floriane-grosset-426435212/?locale=en_US',
+  },
+  {
+    label: 'GitHub',
+    link: 'https://github.com/grosset-floriane',
+  },
+]
 
 export default function About() {
   return (
@@ -14,18 +30,18 @@ export default function About() {
         The easiest way to contact me is by email. Don’t hesitate to drop me a
         line to say hi!
         <br />
-        <Typography component="span">contact@florianegrosset.com</Typography>
+        <Typography component="span">{EMAIL}</Typography>
       </Typography>
-      {/* <ActionsContainer>
-        <Button href={`mailto:${email}`} isLink isExternal>
+      <ActionsContainer>
+        <CopyButton text={EMAIL} label="copy email" />
+        <Button href={`mailto:${EMAIL}`} isLink isExternal>
           open mail box
         </Button>
-      </ActionsContainer> */}
-
+      </ActionsContainer>
       <Typography variant="h5" component="h3" mt={5}>
         On social networks
       </Typography>
-      {/* <ActionsContainer>
+      <ActionsContainer>
         {SOCIAL_MEDIA.map(({ label, link }) => (
           <li key={label} style={{ listStyle: 'none' }}>
             <Button href={link} isLink isExternal>
@@ -33,7 +49,7 @@ export default function About() {
             </Button>
           </li>
         ))}
-      </ActionsContainer> */}
+      </ActionsContainer>
     </LayoutColumn>
   )
 }
