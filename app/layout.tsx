@@ -8,6 +8,7 @@ import theme from './theme'
 import Layout from './components/layout/Layout'
 import TopAppBar from './components/topAppBar/TopAppBar'
 import Footer from './components/footer/Footer'
+import Notification from './components/notification/Notification'
 import { Metadata } from 'next'
 
 interface Props {
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: Props) {
 
                 {children}
               </Layout>
+              <Notification />
               <Footer />
             </ThemeProvider>
           </AppRouterCacheProvider>
