@@ -47,6 +47,5 @@ export default function IndexPage() {
 }
 
 export const metadata: Metadata = {
-  title: 'About',
   description: SITE_TAGELINE,
 }

@@ -38,6 +38,6 @@ export default function RootLayout({ children }: Props) {
 export const metadata: Metadata = {
   title: {
     template: '%s - Floriane Grosset',
-    default: 'About',
+    default: 'About - Floriane Grosset',
   },
 }
