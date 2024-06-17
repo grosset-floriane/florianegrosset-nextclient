@@ -1,5 +1,5 @@
 import React from 'react'
-import { ListItemButton, ListItem, ListItemIcon, Button } from '@mui/material'
+import { ListItemButton, ListItem, ListItemIcon } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close'
 import styles from './NavItem.module.css'
 import { LIGHT_PALETTE } from '@/app/contants/theme'

@@ -9,7 +9,6 @@ import useMediaQuery from '@/app/hooks/useMediaQuery'
 import { NAV_LINKS } from '@/app/contants/navLinks'
 import { Modal } from '@mui/base/Modal'
 import HeaderTitle from '../headerTitle/HeaderTitle'
-import Link from 'next/link'
 
 export const Nav = () => {
   const { isDesktop } = useMediaQuery()

@@ -6,7 +6,6 @@ import MainTitle from '../components/mainTitle/MainTitle'
 import Button from '../components/button/Button'
 import ActionsContainer from '../components/actionContainer/ActionContainer'
 import { EMAIL } from '../contants/navLinks'
-import { copyText } from '../utils/functions'
 import CopyButton from '../components/button/CopyButton'
 
 const SOCIAL_MEDIA = [

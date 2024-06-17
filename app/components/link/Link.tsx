@@ -9,7 +9,6 @@ interface Props {
   children: ReactNode
   isExternal?: boolean
   backgroundColor?: BackgroundColor
-  fontSize?: string
   isActive?: boolean
 }
 
@@ -18,7 +17,6 @@ const Link = ({
   children,
   isExternal = false,
   backgroundColor = 'default',
-  fontSize,
   isActive = false,
 }: Props) => {
   return (

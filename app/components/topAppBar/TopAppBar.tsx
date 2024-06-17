@@ -1,6 +1,5 @@
 'use client'
-import { AppBar, Box, Toolbar } from '@mui/material'
-import Link from 'next/link'
+import { AppBar, Toolbar } from '@mui/material'
 import type { ReactElement } from 'react'
 import { Nav } from '../Nav/Nav'
 import HeaderTitle from '../headerTitle/HeaderTitle'
